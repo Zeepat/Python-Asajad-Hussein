@@ -1,0 +1,18 @@
+{
+    "firstname": "Asajad",
+    "lastname": "Hussein",
+    "age": 22,
+    "languages": [
+        "Python",
+        "C#",
+        "Javascript"
+    ],
+    "contactinfo": {
+        "phone": "0790767647",
+        "email": [
+            "hussein.asajad@gmail.com",
+            "asajad@gmail.com",
+            "firstzpat@gmail.com"
+        ]
+    }
+}
