@@ -9,6 +9,7 @@ colorama = "*"
 
 [dev-packages]
 ipykernel = "*"
+pandas = "*"
 
 [requires]
 python_version = "3.11"
