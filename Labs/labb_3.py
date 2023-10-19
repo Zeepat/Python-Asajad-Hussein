@@ -34,6 +34,9 @@ class Rectangle(Shape):
     def circumference(self):
         return 2 * (self.side1 + self.side2)
     
+    def is_square(self):
+        return self.side1 == self.side2
+    
     def __repr__(self):
         return f"Rectangle({self.side1}, {self.side2}, x={self.x}, y={self.y})"
     
