@@ -5,8 +5,11 @@ class Shape:
         self.y = y
 
     def translate(self, change_in_x, change_in_y):
-        self.x += change_in_x
-        self.y += change_in_y
+        if (type(change_in_x) == int or type(change_in_x) == float) and (type(change_in_y) == int or type(change_in_y) == float):
+            self.x += change_in_x
+            self.y += change_in_y
+        else:
+            raise ValueError("The translation in x and y has to be an integer or float.")
 
     def __repr__(self):
         return f"Shape({self.x}, {self.y})"
