@@ -36,6 +36,9 @@ class Rectangle(Shape):
     
     def is_square(self):
         return self.side1 == self.side2
+
+    def is_inside(self, other_x, other_y):
+        return ((self.x - self.side1 / 2) <= other_x <= (self.x + self.side1 / 2)) and ((self.y - self.side2 / 2) <= other_y <= (self.y + self.side2 / 2))
     
     def __repr__(self):
         return f"Rectangle({self.side1}, {self.side2}, x={self.x}, y={self.y})"
