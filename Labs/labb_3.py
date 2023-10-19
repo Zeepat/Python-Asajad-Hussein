@@ -16,7 +16,10 @@ class Shape:
 
     def __str__(self):
         return f"A shape at ({self.x}, {self.y})"
-    
+
+    def __eq__(self, other):
+        return self.area == other.area
+
 class Rectangle(Shape):
     def __init__(self, x = 0, y = 0, side1 = 1, side2 = 1):
         if side1 <= 0 or side2 <= 0:
@@ -45,7 +48,7 @@ class Rectangle(Shape):
     
     def __str__(self):
         return f"A rectangle with side1 {self.side1} and side2 {self.side2} at ({self.x}, {self.y})"
-    
+
 class Circle(Shape):
     def __init__(self, x = 0, y = 0, radius = 1):
         if radius <= 0:
