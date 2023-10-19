@@ -4,6 +4,10 @@ class Shape:
         self.x = x
         self.y = y
 
+    def translate(self, change_in_x, change_in_y):
+        self.x += change_in_x
+        self.y += change_in_y
+
     def __repr__(self):
         return f"Shape({self.x}, {self.y})"
 
