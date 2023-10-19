@@ -29,3 +29,11 @@ class Circle(Shape):
         self.radius = radius
         self.x = x
         self.y = y
+
+    @property
+    def area(self):
+        return self.radius**2 * math.pi 
+    
+    @property
+    def circumference(self):
+        return 2 * self.radius * math.pi
