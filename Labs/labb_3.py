@@ -18,6 +18,10 @@ class Shape:
         else:
             raise ValueError("The translation in x and y has to be an integer or float.")
 
+    def _check_area_defined(self):
+        if not hasattr(self, 'area'):
+            raise ValueError("Area is not defined for this shape.")
+
     def __repr__(self):
         return f"Shape({self.x}, {self.y})"
 
@@ -26,22 +30,32 @@ class Shape:
 
     def __eq__(self, other):
     # Found out about "__eq__" method from source 1.
+        self._check_area_defined()
+        other._check_area_defined()
         return self.area == other.area
     
     def __lt__(self, other):
     # Check source 2
+        self._check_area_defined()
+        other._check_area_defined()
         return self.area < other.area
     
     def __gt__(self, other):
     # Check source 2
+        self._check_area_defined()
+        other._check_area_defined()
         return self.area > other.area
     
     def __le__(self, other):
     # Check source 2
+        self._check_area_defined()
+        other._check_area_defined()
         return self.area <= other.area
     
     def __ge__(self, other):
     # Check source 2
+        self._check_area_defined()
+        other._check_area_defined()
         return self.area >= other.area
 
 class Rectangle(Shape):
