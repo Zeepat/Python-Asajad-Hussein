@@ -22,15 +22,19 @@ class Shape:
         return self.area == other.area
     
     def __lt__(self, other):
+    # Check source 2
         return self.area < other.area
     
     def __gt__(self, other):
+    # Check source 2
         return self.area > other.area
     
     def __le__(self, other):
+    # Check source 2
         return self.area <= other.area
     
     def __ge__(self, other):
+    # Check source 2
         return self.area >= other.area
 
 class Rectangle(Shape):
@@ -97,6 +101,9 @@ class Circle(Shape):
 ### Sources ###
 
 1. https://stackoverflow.com/questions/1227121/compare-object-instances-for-equality-by-their-attributes
-I found this source after searching "how to compare using comparators of two objects as a method in python" on google
+I found this source after searching "how to compare using comparators of two objects as a method in python" on google.
+
+2. https://jcalderone.livejournal.com/32837.html
+I found this source after searching "is there like __eq__ but for other comparators" on google.
 
 '''
