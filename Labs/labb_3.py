@@ -30,30 +30,35 @@ class Shape:
 
     def __eq__(self, other):
     # Found out about "__eq__" method from source 1.
+        # Compare shapes based on their areas.
         self._check_area_defined()
         other._check_area_defined()
         return self.area == other.area
     
     def __lt__(self, other):
     # Check source 2
+        # Compare shapes based on their areas.
         self._check_area_defined()
         other._check_area_defined()
         return self.area < other.area
     
     def __gt__(self, other):
     # Check source 2
+        # Compare shapes based on their areas.
         self._check_area_defined()
         other._check_area_defined()
         return self.area > other.area
     
     def __le__(self, other):
     # Check source 2
+        # Compare shapes based on their areas.
         self._check_area_defined()
         other._check_area_defined()
         return self.area <= other.area
     
     def __ge__(self, other):
     # Check source 2
+        # Compare shapes based on their areas.
         self._check_area_defined()
         other._check_area_defined()
         return self.area >= other.area
@@ -88,9 +93,11 @@ class Rectangle(Shape):
         return 2 * (self.side1 + self.side2)
     
     def is_square(self):
+        # Check if the rectangle is a square.
         return self.side1 == self.side2
 
     def is_inside(self, other_x, other_y):
+        # Check if a point is inside the rectangle.
         return ((self.x - self.side1 / 2) <= other_x <= (self.x + self.side1 / 2)) and ((self.y - self.side2 / 2) <= other_y <= (self.y + self.side2 / 2))
     
     def __repr__(self):
@@ -128,9 +135,11 @@ class Circle(Shape):
         return 2 * self.radius * math.pi
 
     def is_unit_circle(self):
+        # Check if the circle is a unit circle.
         return self.x == 0 and self.y == 0 and self.radius == 1
     
     def is_inside(self, other_x, other_y):
+        # Check if a point is inside the circle.
         distance_from_centre = math.sqrt((self.x - other_x)**2 + (self.y - other_y)**2)
         return distance_from_centre <= self.radius
     
