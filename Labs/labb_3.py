@@ -15,3 +15,11 @@ class Rectangle(Shape):
         self.side2 = side2
         self.x = x
         self.y = y
+    
+    @property
+    def area(self):
+        return self.side1 * self.side2
+    
+    @property
+    def circumference(self):
+        return 2 * (self.side1 + self.side2)
