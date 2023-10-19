@@ -65,6 +65,10 @@ class Circle(Shape):
     def is_unit_circle(self):
         return self.x == 0 and self.y == 0 and self.radius == 1
     
+    def is_inside(self, other_x, other_y):
+        distance_from_centre = math.sqrt((self.x - other_x)**2 + (self.y - other_y)**2)
+        return distance_from_centre <= self.radius
+    
     def __repr__(self):
         return f"Circle({self.radius}, x={self.x}, y={self.y})"
     
