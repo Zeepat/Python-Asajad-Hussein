@@ -58,6 +58,9 @@ class Circle(Shape):
     @property
     def circumference(self):
         return 2 * self.radius * math.pi
+
+    def is_unit_circle(self):
+        return self.x == 0 and self.y == 0 and self.radius == 1
     
     def __repr__(self):
         return f"Circle({self.radius}, x={self.x}, y={self.y})"
