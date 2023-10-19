@@ -23,3 +23,9 @@ class Rectangle(Shape):
     @property
     def circumference(self):
         return 2 * (self.side1 + self.side2)
+    
+class Circle(Shape):
+    def __init__(self, x = 0, y = 0, radius = 1):
+        self.radius = radius
+        self.x = x
+        self.y = y
