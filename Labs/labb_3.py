@@ -1,6 +1,13 @@
 import math
 class Shape:
     def __init__(self, x=0, y=0):
+        """
+        Initialize a Shape with the given center coordinates.
+
+        Args:
+            x (int/float): X-coordinate of the shape's center.
+            y (int/float): Y-coordinate of the shape's center.
+        """
         self.x = x
         self.y = y
 
@@ -39,6 +46,18 @@ class Shape:
 
 class Rectangle(Shape):
     def __init__(self, x = 0, y = 0, side1 = 1, side2 = 1):
+        """
+        Initialize a Rectangle with the given properties.
+
+        Args:
+            x (int/float): X-coordinate of the rectangle's center.
+            y (int/float): Y-coordinate of the rectangle's center.
+            side1 (int/float): Length of the first side of the rectangle.
+            side2 (int/float): Length of the second side of the rectangle.
+
+        Raises:
+            ValueError: If side1 or side2 is not positive.
+        """
         if side1 <= 0 or side2 <= 0:
             raise ValueError("The side1 and side2 of the rectangle must be positive.")
         self.side1 = side1
@@ -68,6 +87,18 @@ class Rectangle(Shape):
 
 class Circle(Shape):
     def __init__(self, x = 0, y = 0, radius = 1):
+        """
+        Initialize a Rectangle with the given properties.
+
+        Args:
+            x (int/float): X-coordinate of the rectangle's center.
+            y (int/float): Y-coordinate of the rectangle's center.
+            side1 (int/float): Length of the first side of the rectangle.
+            side2 (int/float): Length of the second side of the rectangle.
+
+        Raises:
+            ValueError: If side1 or side2 is not positive.
+        """
         if radius <= 0:
             raise ValueError("The radius of the circle must be positive.")
         self.radius = radius
