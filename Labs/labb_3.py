@@ -18,6 +18,7 @@ class Shape:
         return f"A shape at ({self.x}, {self.y})"
 
     def __eq__(self, other):
+    # Found out about "__eq__" method from source 1.
         return self.area == other.area
 
 class Rectangle(Shape):
@@ -77,3 +78,13 @@ class Circle(Shape):
     
     def __str__(self):
         return f"A circle with radius {self.radius} at ({self.x}, {self.y})"
+    
+
+
+'''
+### Sources ###
+
+1. https://stackoverflow.com/questions/1227121/compare-object-instances-for-equality-by-their-attributes
+I found this source after searching "how to compare using comparators of two objects as a method in python" on google
+
+'''
