@@ -20,6 +20,18 @@ class Shape:
     def __eq__(self, other):
     # Found out about "__eq__" method from source 1.
         return self.area == other.area
+    
+    def __lt__(self, other):
+        return self.area < other.area
+    
+    def __gt__(self, other):
+        return self.area > other.area
+    
+    def __le__(self, other):
+        return self.area <= other.area
+    
+    def __ge__(self, other):
+        return self.area >= other.area
 
 class Rectangle(Shape):
     def __init__(self, x = 0, y = 0, side1 = 1, side2 = 1):
